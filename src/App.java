@@ -3,7 +3,22 @@ public class App {
 
     public static void main(String[] args) throws Exception {
   
-        
+        //----------------- Ejercicio 1 ----------------- 
+        Grafo grafo=new Grafo(false); //No dirigido
+        grafo.agregarNodo(1, "Madrid");
+        grafo.agregarNodo(2, "Barcelona");
+        grafo.agregarNodo(3, "Valencia");
+        grafo.agregarNodo(4, "Alicante");
+
+        grafo.agregarArista(1, 2, 300);
+        grafo.agregarArista(2, 3, 325);
+        grafo.agregarArista(3, 4, 345);
+        grafo.agregarArista(4, 1, 450);
+        grafo.agregarArista(4, 2, 300);
+
+        grafo.busquedaProfundidad(1);
+        System.out.println("\n");
+
 
         //----------------- Ejercicio 2 B ----------------- 
         ColaDinamica cola=new ColaDinamica();
@@ -39,17 +54,11 @@ public class App {
         ordenar.mostrarArray();
         
         ordenar.quickSort(ordenar.arr, 0, ordenar.arr.length - 1);
-        
 
         System.out.println("Después de ordenar:");
         ordenar.mostrarArray();
     
         
-
-
-
-
-
 
     }//main
 ///////////////////////
